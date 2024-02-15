@@ -1,0 +1,15 @@
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def calculate_factorials(start, end):
+    factorials = {}
+    for num in range(start, end + 1):
+        factorials[num] = factorial(num)
+    return factorials
+
+start = 1
+end = 7
+print("Factorials from", start, "to", end, ":", calculate_factorials(start, end))
